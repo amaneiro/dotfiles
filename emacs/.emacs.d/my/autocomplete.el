@@ -16,7 +16,7 @@
 ;; ==== Autocomplete
 (require 'auto-complete-config)
 (add-to-list 'ac-dictionary-directories
-             "~/configs/emacs/.emacs.d/configs/ac-dict")
+             "~/dotfiles/emacs/.emacs.d/configs/ac-dict")
 (ac-config-default)
 ;; (ac-flyspell-workaround)
 
@@ -30,7 +30,7 @@
 ;; ==== ispell, aspell & dictionaries
 (setq-default ispell-program-name "aspell") ;; use aspell instead of aspell
 ;;where ispell have to save my personal dictionary
-(setq ispell-personal-dictionary "~/configs/emacs/.emacs.d/ispell-personal-dict")
+(setq ispell-personal-dictionary "~/dotfiles/emacs/.emacs.d/ispell-personal-dict")
 (ispell-change-dictionary "english")
 
 ;; ==== name completion for describe-function & describe-variable

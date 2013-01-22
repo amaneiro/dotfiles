@@ -1,7 +1,7 @@
-(add-to-list 'load-path "~/configs/emacs/.emacs.d")
-(add-to-list 'load-path "~/configs/emacs/.emacs.d/configs")
-;; (add-to-list 'load-path "~/configs/emacs/.emacs.d/macros")
-;; (add-to-list 'load-path "~/configs/emacs/.emacs.d/elpa")
+(add-to-list 'load-path "~/dotfiles/emacs/.emacs.d")
+(add-to-list 'load-path "~/dotfiles/emacs/.emacs.d/configs")
+;; (add-to-list 'load-path "~/dotfiles/emacs/.emacs.d/macros")
+;; (add-to-list 'load-path "~/dotfiles/emacs/.emacs.d/elpa")
 
 ;; global
 (load "my/bindings.el")
