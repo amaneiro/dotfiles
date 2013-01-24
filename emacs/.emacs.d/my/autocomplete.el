@@ -21,11 +21,11 @@
 ;; (ac-flyspell-workaround)
 
 ;; ==== yasnippet
-;;(require 'yasnippet)
-;;(yas-global-mode 1)
+(require 'yasnippet)
+(yas-global-mode 1)
 
 ;;config snippets directory
-;;(yas-load-directory "~/configs/emacs/.emacs.d/elpa/yasnippet-20121127.25/snippets/")
+(yas-load-directory "~/dotfiles/emacs/.emacs.d/elpa/yasnippet-20130112.1823/snippets/")
 
 ;; ==== ispell, aspell & dictionaries
 (setq-default ispell-program-name "aspell") ;; use aspell instead of aspell
