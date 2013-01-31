@@ -14,6 +14,6 @@
 
 ;; modes
 (load "my/html.el")
-;; (load "my/flymake-configs.el")
+(load "my/flymake-configs.el")
 ;; (load "my/rope-configs.el")
 ;; (require 'iedit)

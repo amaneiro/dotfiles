@@ -18,7 +18,7 @@
 (add-to-list 'ac-dictionary-directories
              "~/dotfiles/emacs/.emacs.d/configs/ac-dict")
 (ac-config-default)
-;; (ac-flyspell-workaround)
+(ac-flyspell-workaround)
 
 ;; ==== yasnippet
 (require 'yasnippet)
