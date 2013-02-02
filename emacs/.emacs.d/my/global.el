@@ -15,6 +15,9 @@ and no matter how far away the goal is, the only way to get there is
 by putting one foot in front of another every day.\n Given time, there
 is no problem that’s insurmountable.»")
 
+;; === don't show toolbar on window mode
+(tool-bar-mode -1)
+
 ;; === global requires
 (require 'cl)
 (require 'saveplace)
