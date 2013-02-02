@@ -15,7 +15,7 @@
  )
 
 ;;this doesn't work on no-window mode
-;;(require 'rfringe)
+(require 'rfringe)
 
 ;; === python specific
 
