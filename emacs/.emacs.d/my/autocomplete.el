@@ -25,7 +25,7 @@
 (yas-global-mode 1)
 
 ;;config snippets directory
-(yas-load-directory "~/dotfiles/emacs/.emacs.d/elpa/yasnippet-20130112.1823/snippets/")
+(yas-load-directory "~/dotfiles/emacs/.emacs.d/elpa/yasnippet-20130505.2115/snippets/")
 
 ;; ==== ispell, aspell & dictionaries
 (setq-default ispell-program-name "aspell") ;; use aspell instead of aspell
