@@ -13,6 +13,7 @@
 (load "my/autocomplete.el")
 
 ;; modes
+(load "my/textmate.el")
 ;; (load "my/html.el")
 ;; (load "my/ror.el")
 ;; (load "my/flymake-configs.el")
