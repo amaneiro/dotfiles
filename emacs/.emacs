@@ -10,6 +10,7 @@
 (load "my/backup-policy.el")
 (load "my/colors.el")
 (load "my/global.el")
+(load "my/elscreen.el")
 (load "my/autocomplete.el")
 
 ;; modes
