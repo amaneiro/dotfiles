@@ -69,3 +69,6 @@
 ;;(transient-mark-mode 1) ;; on by default since 23.2
 ; delete seleted text when typing
 (delete-selection-mode 1)
+
+; === allow using fullscreen mode (F11)
+(fullscreen-mode 1)
