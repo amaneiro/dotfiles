@@ -20,3 +20,4 @@
 ;; (load "my/flymake-configs.el")
 ;; (load "my/rope-configs.el")
 ;; (require 'iedit)
+(put 'narrow-to-region 'disabled nil)
