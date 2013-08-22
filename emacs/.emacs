@@ -13,8 +13,8 @@
 (load "my/autocomplete.el")
 
 ;; modes
-(load "my/html.el")
-(load "my/ror.el")
-(load "my/flymake-configs.el")
+;; (load "my/html.el")
+;; (load "my/ror.el")
+;; (load "my/flymake-configs.el")
 ;; (load "my/rope-configs.el")
 ;; (require 'iedit)
