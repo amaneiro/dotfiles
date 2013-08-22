@@ -22,9 +22,11 @@
 
 ;; ==== yasnippet
 (require 'yasnippet)
-(yas-global-mode 1)
+;; (yas-global-mode 1)
+;; uncomment previous line and comment below for using in global mode
+(yas-reload-all)
 
-;;config snippets directory
+;; snippets directory
 (yas-load-directory "~/dotfiles/emacs/.emacs.d/elpa/yasnippet-snippets/")
 
 ;; ==== ispell, aspell & dictionaries
