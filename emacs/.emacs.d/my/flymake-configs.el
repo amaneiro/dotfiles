@@ -17,6 +17,17 @@
 ;;this doesn't work on no-window mode
 (require 'rfringe)
 
+;; === When does flymake run:
+;; https://www.gnu.org/software/emacs/manual/html_mono/flymake.html#Using-Flymake
+;; 1) when file opens
+;; 2) every n seconds
+;; 3) when introducing a new line
+;;
+;; do not run flymake on writing new lines
+(setq flymake-start-syntax-check-on-newline nil)
+;; run flymake every n seconds
+(setq flymake-no-changes-timeout 10)
+
 ;; === python specific
 
 ;;active minor in python-mode
