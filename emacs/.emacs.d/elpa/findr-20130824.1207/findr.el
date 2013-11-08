@@ -4,7 +4,7 @@
 
 ;; Author: David Bakhash <cadet@bu.edu>
 ;; Maintainer: David Bakhash <cadet@bu.edu>
-;; Version: 20130127.2032
+;; Version: 20130824.1207
 ;; X-Original-Version: 0.9.11
 ;; Created: Tue Jul 27 12:49:22 EST 1999
 ;; Keywords: files
