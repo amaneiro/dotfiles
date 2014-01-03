@@ -2,7 +2,7 @@
 ;;
 ;; Copyright (C) 2011-2013 Vitalie Spinu
 ;; Author: Vitalie Spinu  <spinuvit.list[ aaattt ]gmail[ dot ]com>
-;; Version: 20130509.2231
+;; Version: 20131210.1130
 ;; X-Original-Version: DEV
 ;; Keywords: ido, imenu, tags
 ;; URL: https://github.com/vitoshka/imenu-anywhere
@@ -63,7 +63,7 @@ the major modes of interest."
   (when (null modes)
     (setq modes (list major-mode)))
   (apply 'append
-         (mapcar '(lambda (buff)
+         (mapcar (lambda (buff)
                     (when (or (eq modes t) ; all of them
                               (member (buffer-local-value 'major-mode buff) modes))
                       (with-current-buffer buff
@@ -161,7 +161,7 @@ See the code for `imenu-anywhere--preprocess-entry-ido' and
 (defun imenu-anywhere (&optional modes)
   "Switch to a buffer-local tag from Imenu via Ido."
   (interactive "P")
-  (when (called-interactively-p)
+  (when (called-interactively-p 'interactive)
     (if modes
         (setq modes t)))
   (let (reset-ido)

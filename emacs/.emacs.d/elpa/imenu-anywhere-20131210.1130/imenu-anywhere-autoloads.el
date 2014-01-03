@@ -4,7 +4,7 @@
 
 
 ;;;### (autoloads (helm-imenu-anywhere imenu-anywhere) "imenu-anywhere"
-;;;;;;  "imenu-anywhere.el" (21005 62003 386964 643000))
+;;;;;;  "imenu-anywhere.el" (21190 43007 430855 313000))
 ;;; Generated autoloads from imenu-anywhere.el
 
 (autoload 'imenu-anywhere "imenu-anywhere" "\
@@ -23,8 +23,8 @@ pyramidal view allows distinguishing different buffers.
 
 ;;;***
 
-;;;### (autoloads nil nil ("imenu-anywhere-pkg.el") (21005 62003
-;;;;;;  508715 242000))
+;;;### (autoloads nil nil ("imenu-anywhere-pkg.el") (21190 43007
+;;;;;;  582952 709000))
 
 ;;;***
 
