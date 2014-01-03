@@ -5,7 +5,7 @@
 ;; Author: Mickey Petersen <mickey@masteringemacs.org>
 ;; Maintainer: Mickey Petersen <mickey@masteringemacs.org>
 ;; Keywords: extensions
-;; Version: 20131105.1629
+;; Version: 20131230.739
 ;; X-Original-Version: 0.2
 
 ;;; Contributions
@@ -67,6 +67,9 @@
 
 (provide 'smartscan)
 
+(eval-when-compile
+  (require 'cl-lib))
+
 (defvar smartscan-use-extended-syntax nil
   "If t the smart symbol functionality will consider extended
 syntax in finding matches, if such matches exist.")
@@ -113,7 +116,8 @@ is valid."
   ;; brand-new command and we re-set the search term.
   (unless (memq last-command '(smartscan-symbol-go-forward
                                smartscan-symbol-go-backward))
-    (setq smartscan-last-symbol-name name))
+    (setq smartscan-last-symbol-name name)
+    (push-mark))
   (setq smartscan-symbol-old-pt (point))
   (message (format "%s scan for symbol \"%s\""
                    (capitalize (symbol-name direction))
@@ -175,7 +179,7 @@ With C-u the scope is limited to the current defun, as defined by
 
 This function uses `search-forward' and `replace-match' to do the
 actual work."
-  (interactive "p")
+  (interactive "P")
   (save-excursion
       (let* ((oldsymbol (smartscan-symbol-at-pt 'beginning))
              (newsymbol (query-replace-read-to
@@ -188,7 +192,7 @@ actual work."
           (goto-char (point-min)))
         (while (search-forward
                 oldsymbol (if arg (save-excursion (end-of-defun) (point)) nil) t nil)
-          (replace-match newsymbol nil t) (incf counter 1))
+          (replace-match newsymbol nil t) (cl-incf counter 1))
         (message "Smart Scan replaced %d matches" counter))))
 
 

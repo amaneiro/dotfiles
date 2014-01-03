@@ -5,7 +5,7 @@
 
 ;;;### (autoloads (global-smartscan-mode smartscan-mode smartscan-symbol-replace
 ;;;;;;  smartscan-symbol-go-backward smartscan-symbol-go-forward)
-;;;;;;  "smartscan" "smartscan.el" (21116 43438 527967 530000))
+;;;;;;  "smartscan" "smartscan.el" (21190 43000 562855 77000))
 ;;; Generated autoloads from smartscan.el
 
 (autoload 'smartscan-symbol-go-forward "smartscan" "\
@@ -66,8 +66,8 @@ See `smartscan-mode' for more information on Smartscan mode.
 
 ;;;***
 
-;;;### (autoloads nil nil ("smartscan-pkg.el") (21116 43438 624995
-;;;;;;  615000))
+;;;### (autoloads nil nil ("smartscan-pkg.el") (21190 43000 779966
+;;;;;;  88000))
 
 ;;;***
 
