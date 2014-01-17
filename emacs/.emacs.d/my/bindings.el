@@ -3,6 +3,7 @@
 
 ;; open ffap
 (global-set-key (kbd "<f9>") 'ffap)
+(global-set-key (kbd "<f8>") 'buffer-menu)
 
 ;; Window manipulation
 (global-set-key (kbd "C-S-<right>") 'enlarge-window-horizontally)
