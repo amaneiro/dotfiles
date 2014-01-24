@@ -4,7 +4,7 @@
 
 ;; Author: Tomohiro Matsuyama <tomo@cx4a.org>
 ;; Keywords: lisp
-;; Version: 20131230.544
+;; Version: 20140123.2
 ;; X-Original-Version: 0.5.0
 ;; Package-Requires: ((cl-lib "0.3"))
 
@@ -557,7 +557,7 @@ KEYMAP is a keymap that will be put on the popup contents."
         (popup-save-buffer-state
           (goto-char (point-max))
           (insert (make-string newlines ?\n))))
-      
+
       ;; Case: the popup overflows
       (if overflow
           (if foldable
@@ -579,7 +579,7 @@ KEYMAP is a keymap that will be put on the popup contents."
         (setq column 0)
         (cl-decf popup-width margin-left)
         (setq margin-left-cancel t))
-      
+
       (dotimes (i height)
         (let (overlay begin w (dangle t) (prefix "") (postfix ""))
           (when around
@@ -1005,6 +1005,7 @@ HELP-DELAY is a delay of displaying helps."
                      parent
                      parent-offset
                      nowait
+                     nostrip
                      prompt
                      &aux tip lines)
   "Show a tooltip of STRING at POINT. This function is
@@ -1016,20 +1017,24 @@ If TRUNCATE is non-nil, the tooltip can be truncated.
 If NOWAIT is non-nil, this function immediately returns the
 tooltip instance without entering event loop.
 
+If `NOSTRIP` is non-nil, `STRING` properties are not stripped.
+
 PROMPT is a prompt string when reading events during event loop."
   (if (bufferp string)
       (setq string (with-current-buffer string (buffer-string))))
-  ;; TODO strip text (mainly face) properties
-  (setq string (substring-no-properties string))
+
+  (unless nostrip
+    ;; TODO strip text (mainly face) properties
+    (setq string (substring-no-properties string)))
 
   (and (eq margin t) (setq margin 1))
   (or margin-left (setq margin-left margin))
   (or margin-right (setq margin-right margin))
-  
+
   (let ((it (popup-fill-string string width popup-tip-max-width)))
     (setq width (car it)
           lines (cdr it)))
-  
+
   (setq tip (popup-create point width height
                           :min-height min-height
                           :around around
