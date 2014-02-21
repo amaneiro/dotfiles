@@ -1,9 +1,11 @@
 ;; How to Define Keyboard Shortcuts in Emacs
 ;; http://xahlee.org/emacs/keyboard_shortcuts.html
 
-;; open ffap
+;; funcion keybindings
 (global-set-key (kbd "<f9>") 'ffap)
 (global-set-key (kbd "<f8>") 'buffer-menu)
+(global-set-key (kbd "<f5>") 'revert-buffer)
+(global-set-key (kbd "<f1>") 'bookmark-bmenu-list)
 
 ;; Window manipulation
 (global-set-key (kbd "C-S-<right>") 'enlarge-window-horizontally)
