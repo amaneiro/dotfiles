@@ -26,7 +26,7 @@
 ;; uncomment previous line and comment below for using in global mode
 (setq yas-snippet-dirs
       '("~/dotfiles/emacs/.emacs.d/my/snippets/"              ;; personal snippets
-        "~/dotfiles/emacs/.emacs.d/elpa/yasnippet-snippets/snippets/"  ;; the default collection
+        "~/dotfiles/emacs/.emacs.d/elpa/yasnippet-snippets/"  ;; the default collection
         ))
 (yas-reload-all)
 
