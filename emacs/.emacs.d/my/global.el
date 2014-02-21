@@ -72,3 +72,9 @@
 
 ; === allow using fullscreen mode (F11)
 (fullscreen-mode 1)
+
+; === dired-x and omit files
+(require 'dired-x)
+(setq-default dired-omit-files-p t) ; this is buffer-local variable
+(setq dired-omit-files
+    (concat dired-omit-files "\\|pyc$"))
