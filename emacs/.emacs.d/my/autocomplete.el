@@ -20,19 +20,6 @@
 (ac-config-default)
 (ac-flyspell-workaround)
 
-;; ==== yasnippet
-(require 'yasnippet)
-;; (yas-global-mode 1)
-;; uncomment previous line and comment below for using in global mode
-(setq yas-snippet-dirs
-      '("~/dotfiles/emacs/.emacs.d/my/snippets/"              ;; personal snippets
-        "~/dotfiles/emacs/.emacs.d/elpa/yasnippet-snippets/"  ;; the default collection
-        ))
-(yas-reload-all)
-
-;; snippets directory
-;; (yas-load-directory "~/dotfiles/emacs/.emacs.d/elpa/yasnippet-snippets/")
-
 ;; ==== ispell, aspell & dictionaries
 (setq-default ispell-program-name "aspell") ;; use aspell instead of aspell
 ;;where ispell have to save my personal dictionary
