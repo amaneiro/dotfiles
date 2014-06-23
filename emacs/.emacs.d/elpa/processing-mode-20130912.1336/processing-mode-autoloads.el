@@ -1,11 +1,12 @@
 ;;; processing-mode-autoloads.el --- automatically extracted autoloads
 ;;
 ;;; Code:
-(add-to-list 'load-path (or (file-name-directory #$) (car load-path)))
+
 
-;;;### (autoloads nil "processing-mode" "processing-mode.el" (21414
-;;;;;;  63776 342987 320000))
-;;; Generated autoloads from processing-mode.el
+;;;### (autoloads (processing-mode processing-find-sketch) "processing-mode"
+;;;;;;  "../../../../../../.emacs.d/elpa/processing-mode-20130912.1336/processing-mode.el"
+;;;;;;  "8f5e15e87d890acdb0b5485a66d20d81")
+;;; Generated autoloads from ../../../../../../.emacs.d/elpa/processing-mode-20130912.1336/processing-mode.el
 
 (autoload 'processing-find-sketch "processing-mode" "\
 Find a processing sketch with NAME in `processing-sketchbook-dir'.
@@ -24,9 +25,17 @@ Major mode for Processing.
 
 ;;;***
 
+;;;### (autoloads nil nil ("../../../../../../.emacs.d/elpa/processing-mode-20130912.1336/processing-mode-pkg.el"
+;;;;;;  "../../../../../../.emacs.d/elpa/processing-mode-20130912.1336/processing-mode.el")
+;;;;;;  (21416 3423 905405 691000))
+
+;;;***
+
+(provide 'processing-mode-autoloads)
 ;; Local Variables:
 ;; version-control: never
 ;; no-byte-compile: t
 ;; no-update-autoloads: t
+;; coding: utf-8
 ;; End:
 ;;; processing-mode-autoloads.el ends here
