@@ -1,0 +1,53 @@
+[alias]
+	# WORKING WITH BRANCHES ---------------------------------
+        br   = branch
+        u    = add -u
+        co   = checkout
+        com  = checkout master
+	pr   = "!git fetch origin pull/$1/head:$2; git checkout $2 #"
+	#pr   = "!git checkout -b $2 origin/$1 #"
+	#pr-fork = "!git fetch origin pull/$1/head:$2; git checkout $2 #"
+
+	# COMMIT / UNDO / MERGE / REBASE ------------------------
+        ci   = commit -v
+        wip  = commit -m "wip"
+        fix  = commit -m "fix"
+	undo = "!git reset --soft HEAD~1; git reset HEAD ." # undo last commit
+        rm-last-commit = reset --hard HEAD~1 # remove last commit
+        rbm  = rebase master
+        rim  = rebase --interactive master
+
+	# REVIEW THINGS -----------------------------------------
+        st   = status -s
+        df   = diff
+        dfc  = diff --cached
+        lg      = log -p
+        lg      = log --abbrev-commit --pretty=oneline --all --decorate --graph
+        lgfull  = log -p
+        lgfiles = log --name-only
+        whoami  = config --get user.email
+
+	# ARCHEOLOGY --------------------------------------------
+        firstcommit = "!bash -c 'git log --pretty=format:%H --reverse|head -1'"
+        topfiles = "!git log HEAD `git firstcommit` --name-only --pretty="format:"|sort|uniq -c|sort -n -r"
+        topauthors = shortlog -sn --
+        ls-files-tracked = ls-tree -r master --name-only
+[core]
+        #pager = most
+	editor = nano
+[color]
+        ui = auto
+[user]
+        name = Andrés
+        email = nosolosw@users.noreply.github.com
+[giggle]
+	compact-mode = false
+	main-window-maximized = true
+	main-window-geometry = 0x0+0+0
+        history-view-vpane-position = 399
+        main-window-view = HistoryView
+        file-view-vpane-position = 548
+[push]
+	default = simple
+[fetch]
+	prune = true
